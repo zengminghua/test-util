@@ -1,6 +1,8 @@
 package com.zmh.util;
 
 import com.zmh.util.tools.RandomNumber;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * common tools for zmh
@@ -16,15 +18,16 @@ public class Main {
      */
     private static final int CIRCLE_COUNT = 1;
 
+    private static Logger LOGGER = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
 
+        // 循环调用方法
         for (int i = 0; i < CIRCLE_COUNT; i++) {
-            // String result = Randomkey.generate();
 
             String result = RandomNumber.generate();
-            // String result = SerialUtils.generateTraceNo(24);
 
-            // System.out.println(result);
+            LOGGER.info("输出结果：{}", result);
         }
 
     }
