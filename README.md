@@ -6,7 +6,7 @@
 
 # Env
 
-* java version "1.8.0_172"
+* java version "1.8.0_181"
 
 # Contents
 
@@ -17,6 +17,8 @@
 | IpValidate.java | validate ipv4/ipv6 ip address | IpValidateTest.java |
 
 # Release Notes
+
+* 20181123, add test util.
 
 * 20180829, add ip validate util; add contents for util (README).
 
