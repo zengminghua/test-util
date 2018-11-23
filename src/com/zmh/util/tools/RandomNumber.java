@@ -1,5 +1,6 @@
 package com.zmh.util.tools;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 /**
@@ -18,13 +19,13 @@ public class RandomNumber {
      */
     public static String generate() {
 
-        Random random = new Random();
+        SecureRandom random = new SecureRandom();
         long randomNu = random.nextLong();
         String randomStr = String.valueOf(Math.abs(randomNu));
 
         // 如果生成的随机数小于19位, 随机补一位
         while (randomStr.length() < RANDOM_LENGTH) {
-            randomStr += random.nextInt(10);
+            randomStr = randomStr + String.valueOf(random.nextInt(10));
         }
 
         return randomStr;
